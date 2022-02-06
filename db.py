@@ -44,4 +44,4 @@ def add_customer(name, age):
 if __name__ == '__main__':
     init_db()
 
-    # print(init_db().__doc__)
+    print(init_db.__doc__)

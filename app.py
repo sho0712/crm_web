@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 
 import db
 
@@ -18,7 +18,10 @@ def register():
     age = request.form['age']
     db.add_customer(name, age)
 
-    return render_template("index.html")
+    # 処理が終わったら（）に移動する　行き先を指定できる
+    # return redirect("/index")
+    # index関数に移動してください。
+    return redirect(url_for("index"))
 
 
 if __name__ == '__main__':
