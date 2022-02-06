@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>一覧</title>
+</head>
+<body>
+<h1>顧客一覧</h1>
+<ol>
+    {% for customer in customers %}
+    <!-- Bob 15 => Bobさん 15才 -->
+    <!-- {{ customer[0] }} {{ customer[1] }}<br>-->
+    <li>{{ customer[0] }}さん {{ customer[1] }}才</li>
+    {% endfor %}
+</ol>
+</body>
+</html>
