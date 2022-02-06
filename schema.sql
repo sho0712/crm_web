@@ -3,16 +3,16 @@ DROP TABLE IF EXISTS customers;
 
 -- テーブルがなかったら作成
 CREATE TABLE IF NOT EXISTS customers(
-   name TEXT,
-   age INTEGER
+   place TEXT,
+   temperature INTEGER
 );
 
 -- テストデータ挿入
 INSERT INTO customers
 
 VALUES
-  ('Bob',15),
-  ('Tom',57),
-  ('Ken',76)
+  ( '平泉',15),
+  ( '一関',57),
+  ( '仙台',76)
  ;
 

@@ -5,18 +5,18 @@ import db
 app = Flask(__name__)
 
 
-# /indexにGETでアクセスが来たらindex.htmlを返す
-@app.get("/index")
+# /にGETでアクセスが来たらindex.htmlを返す
+@app.get("/")
 def index():
     customers = db.get_all_customers()
     return render_template("index.html", customers=customers)
 
 
-@app.post("/index")
+@app.post("/")
 def register():
-    name = request.form['name']
-    age = request.form['age']
-    db.add_customer(name, age)
+    place = request.form['place']
+    temp = request.form['temp']
+    db.add_customer(place, temp)
 
     # 処理が終わったら（）に移動する　行き先を指定できる
     # return redirect("/index")
