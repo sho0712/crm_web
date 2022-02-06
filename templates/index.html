@@ -12,6 +12,18 @@
     <!-- {{ customer[0] }} {{ customer[1] }}<br>-->
     <li>{{ customer[0] }}さん {{ customer[1] }}才</li>
     {% endfor %}
+
+    <form action="" method="post">
+    <div>
+        <label for="name">名前:</label>
+        <input type="text" name="name" id="name">
+    </div>
+    <div>
+        <label for="age">年齢:</label>
+        <input type="number" name="age" id="age">
+    </div>
+    <input type="submit" value="登録">
+</form>
 </ol>
 </body>
 </html>
